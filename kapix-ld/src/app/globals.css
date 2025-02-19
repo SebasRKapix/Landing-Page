@@ -1,21 +1,83 @@
+@import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 25, 30, 41;
+  --background-rgb: 255, 255, 255;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
 }
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.7);
+  --webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+[class^="fi-"],
+[class*="fi-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.start-btn1 i {
+  margin-left: 10px;
+}
+
+.start-btn1 i {
+  transition: all 0.4s !important; 
+}
+
+.start-btn1:hover i {
+  padding-left: 5px !important; 
+}
+
+.change-color {
+  color: #ffffff;
+  background-color: #01c38cbb;
+  padding: 5px 20px;
+  border-radius: 25px;
+}
+
+.choose-color {
+  color: #01c38d;
+}
+
+.play-video {
+  font-size: 30px;
+}
+
