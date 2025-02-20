@@ -1,7 +1,38 @@
 'use client';
-import { useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import SplashCursor from "@/Animations/SplashCursor/SplashCursor";
+import GradientText from "@/TextAnimations/GradientText/GradientText";
+
+interface GradientTextProps {
+  children: ReactNode;
+  className?: string;
+  colors?: string[];
+  animationSpeed?: number;
+  showBorder?: boolean;
+}
+
+function LocalGradientText({
+  children,
+  className = "font-bold text-6xl",
+  colors = ["#01C38D", "#191E29", "#01C38D", "#191E29", "#01C38D"], // Default colors
+  animationSpeed = 8, // Default animation speed in seconds
+  showBorder = false, // Default overlay visibility
+}: GradientTextProps) {
+  const gradientStyle = {
+      backgroundImage: `linear-gradient(to right, ${colors.join(", ")})`,
+      animationDuration: `${animationSpeed}s`,
+  };
+
+  return (
+      <div className={`animated-gradient-text ${className}`}>
+          {showBorder && <div className="gradient-overlay" style={gradientStyle}></div>}
+          <div className="text-content" style={gradientStyle}>{children}</div>
+      </div>
+  );
+}
+
 
 export default function Home() {
 
@@ -31,22 +62,22 @@ export default function Home() {
   const videoGallery = [
     {
       id: "video1",
-      thumbnail: "/image (7).png",
-      title: "Cómo Kapix Lite revoluciona la gestión empresarial",
+      thumbnail: "/YOUTUBE1.jpg",
+      title: "¿Qué puedes hacer con el módulo de proyectos?",
       duration: "5:42",
       youtubeUrl: "https://youtube.com/watch?v=example1",
     },
     {
       id: "video2",
-      thumbnail: "/image (7).png",
-      title: "Testimonios de clientes: Resultados con Kapix Lite",
+      thumbnail: "/YOUTUBE2.png",
+      title: "¿Qué puedes hacer con el módulo de clientes?",
       duration: "8:17",
       youtubeUrl: "https://youtube.com/watch?v=example2",
     },
     {
       id: "video3",
-      thumbnail: "/image (7).png",
-      title: "Tutorial: Todo lo que debes saber antes de comenzar",
+      thumbnail: "/YOUTUBE3.png",
+      title: "¿Qué puedes hacer con el módulo de compras?",
       duration: "12:03",
       youtubeUrl: "https://youtube.com/watch?v=example3",
     },
@@ -54,6 +85,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 text-[#191e29]">
+      <SplashCursor />
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section with gradient overlay */}
         <section className="relative mb-32 p-8 rounded-3xl overflow-hidden">
@@ -64,7 +96,7 @@ export default function Home() {
             <div className="lg:w-1/2 lg:pr-12 animate-on-scroll opacity-0 transition-all duration-700 translate-y-12" 
                 style={{transitionDelay: '100ms'}}>
               <h1 className="text-5xl font-bold mb-6 leading-tight">
-                Transforma tu negocio con <span className="bg-gradient-to-r from-[#191e29] to-[#01c38d] bg-clip-text text-transparent ">Kapix Lite</span><span className="text-[#01c38d] text-5xl">.</span>
+              <LocalGradientText>Transforma tu negocio con Kapix Lite.</LocalGradientText>
               </h1>
               <p className="text-xl mb-8 text-[#696E79]">
                 Mejora tus procesos, aumenta la eficiencia y fomenta el crecimiento de tu empresa con nuestra herramienta gratuita y fácil de usar.
@@ -196,6 +228,8 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+            
 
       <style jsx global>{`
         .animate-on-scroll {
