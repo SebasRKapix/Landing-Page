@@ -16,9 +16,9 @@ interface GradientTextProps {
 function LocalGradientText({
   children,
   className = "font-bold text-6xl",
-  colors = ["#01C38D", "#191E29", "#01C38D", "#191E29", "#01C38D"], // Default colors
-  animationSpeed = 8, // Default animation speed in seconds
-  showBorder = false, // Default overlay visibility
+  colors = ["#01C38D", "#191E29", "#01C38D", "#191E29", "#01C38D"],
+  animationSpeed = 8,
+  showBorder = false, 
 }: GradientTextProps) {
   const gradientStyle = {
       backgroundImage: `linear-gradient(to right, ${colors.join(", ")})`,
