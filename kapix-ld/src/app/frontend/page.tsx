@@ -85,7 +85,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 text-[#191e29]">
-      <SplashCursor />
+      
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section with gradient overlay */}
         <section className="relative mb-32 p-8 rounded-3xl overflow-hidden">
