@@ -2,8 +2,8 @@
 import { ReactNode, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import SplashCursor from "@/Animations/SplashCursor/SplashCursor"; //
-// import GradientText from "@/TextAnimations/GradientText/GradientText"; //
+import SplashCursor from "@/Animations/SplashCursor/SplashCursor";
+import GradientText from "@/TextAnimations/GradientText/GradientText";
 
 interface GradientTextProps {
   children: ReactNode;
