@@ -229,8 +229,6 @@ export default function Home() {
         </section>
       </main>
 
-            
-
       <style jsx global>{`
         .animate-on-scroll {
           opacity: 0;
@@ -245,7 +243,7 @@ export default function Home() {
         
         .glassmorphism {
           --webkit-backdrop-filter: blur(10px);
-          background: rgba(255, 255, 255, 0.8);
+          background: rgba(255, 255, 255, 0.7);
           border: 1px solid rgba(255, 255, 255, 0.3);
         }
       `}</style>
