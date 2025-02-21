@@ -3,7 +3,6 @@ import { ReactNode, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import SplashCursor from "@/Animations/SplashCursor/SplashCursor";
-import GradientText from "@/TextAnimations/GradientText/GradientText";
 
 interface GradientTextProps {
   children: ReactNode;
@@ -35,8 +34,6 @@ function LocalGradientText({
 
 
 export default function Home() {
-
-  const animatedEls = useRef([]);
 
   useEffect(() => {
 
@@ -84,6 +81,7 @@ export default function Home() {
   ];
 
   return (
+    
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 text-[#191e29]">
       
       <main className="container mx-auto px-4 py-16">
