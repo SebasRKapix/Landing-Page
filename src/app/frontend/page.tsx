@@ -1,6 +1,7 @@
 'use client';
 import { ReactNode, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link"; 
 
 interface GradientTextProps {
   children: ReactNode;
@@ -95,10 +96,13 @@ export default function Home() {
               <p className="text-xl mb-8 text-[#696E79]">
               Nos lo has pedido y lo hemos escuchado. Con Kapix Lite, una versión para un solo usuario, podrás gestionar tus finanzas, registrar gastos, organizar citas, dar seguimiento a tus clientes y mucho más. ¡Haz clic en el enlace y obtén Kapix Lite ahora!
               </p>
-              <button className="bg-[#01c38d] text-white shadow-xl px-8 py-3 rounded-full transition-all duration-300 text-lg font-semibold hover:bg-[#00a77a] hover:shadow-lg transform hover:-translate-y-2 flex space-x-2 items-center start-btn1 group">
-                Obtenerlo gratis
-                <i className="fi fi-rr-arrow-right"></i>
-              </button>
+              {/* Botón con enlace usando Link de Next.js */}
+              <Link href="./test.tsx" className="inline-block">
+                <button className="bg-[#01c38d] text-white shadow-xl px-8 py-3 rounded-full transition-all duration-300 text-lg font-semibold hover:bg-[#00a77a] hover:shadow-lg transform hover:-translate-y-2 flex space-x-2 items-center start-btn1 group">
+                  Obtenerlo gratis
+                  <i className="fi fi-rr-arrow-right ml-2"></i>
+                </button>
+              </Link>
             </div>
             <div className="lg:w-1/2 mt-10 lg:mt-0 animate-on-scroll opacity-0 transition-all duration-700 translate-x-12"
                 style={{transitionDelay: '300ms'}}>
