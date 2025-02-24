@@ -97,7 +97,7 @@ export default function Home() {
               Nos lo has pedido y lo hemos escuchado. Con Kapix Lite, una versión para un solo usuario, podrás gestionar tus finanzas, registrar gastos, organizar citas, dar seguimiento a tus clientes y mucho más. ¡Haz clic en el enlace y obtén Kapix Lite ahora!
               </p>
               {/* Botón con enlace usando Link de Next.js */}
-              <Link href="./test.tsx" className="inline-block">
+              <Link href="https://kpixs.com/KapixRegister" className="inline-block">
                 <button className="bg-[#01c38d] text-white shadow-xl px-8 py-3 rounded-full transition-all duration-300 text-lg font-semibold hover:bg-[#00a77a] hover:shadow-lg transform hover:-translate-y-2 flex space-x-2 items-center start-btn1 group">
                   Obtenerlo gratis
                   <i className="fi fi-rr-arrow-right ml-2"></i>
