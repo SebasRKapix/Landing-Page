@@ -1,7 +1,6 @@
 'use client';
 import { ReactNode, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 interface GradientTextProps {
   children: ReactNode;
@@ -55,27 +54,24 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  const videoGallery = [
+  const imageGallery = [
     {
-      id: "video1",
-      thumbnail: "/YOUTUBE1.jpg",
-      title: "¿Qué puedes hacer con el módulo de proyectos?",
-      duration: "5:42",
-      youtubeUrl: "https://youtube.com/watch?v=example1",
+      id: "tareas",
+      src: "/Tareas.png",
+      title: "Módulo de Tareas",
+      description: "Puedes crear tareas para optimizar el seguimiento y control de tus actividades de manera más eficiente.",
     },
     {
-      id: "video2",
-      thumbnail: "/YOUTUBE2.png",
-      title: "¿Qué puedes hacer con el módulo de clientes?",
-      duration: "8:17",
-      youtubeUrl: "https://youtube.com/watch?v=example2",
+      id: "proyectos",
+      src: "/Proyectos.png",
+      title: "Módulo de Proyectos",
+      description: "Accede y gestiona proyectos para mejorar la planificación, seguimiento y control de tus iniciativas de manera más efectiva.",
     },
     {
-      id: "video3",
-      thumbnail: "/YOUTUBE3.png",
-      title: "¿Qué puedes hacer con el módulo de compras?",
-      duration: "12:03",
-      youtubeUrl: "https://youtube.com/watch?v=example3",
+      id: "contratos",
+      src: "/Contratos.png",
+      title: "Módulo de Contratos",
+      description: "Gestiona y supervisa tus contratos de manera integral, garantizando su correcta administración y cumplimiento en cada etapa.",
     },
   ];
 
@@ -93,10 +89,11 @@ export default function Home() {
             <div className="lg:w-1/2 lg:pr-12 animate-on-scroll opacity-0 transition-all duration-700 translate-y-12" 
                 style={{transitionDelay: '100ms'}}>
               <h1 className="text-5xl font-bold mb-6 leading-tight">
-              <LocalGradientText>Transforma tu negocio con Kapix Lite.</LocalGradientText>
+              <LocalGradientText>Gestiona tu negocio desde el primer día con Kapix Lite
+              <span className="text-5xl">.</span></LocalGradientText>
               </h1>
               <p className="text-xl mb-8 text-[#696E79]">
-                Mejora tus procesos, aumenta la eficiencia y fomenta el crecimiento de tu empresa con nuestra herramienta gratuita y fácil de usar.
+              Nos lo has pedido y lo hemos escuchado. Con Kapix Lite, una versión para un solo usuario, podrás gestionar tus finanzas, registrar gastos, organizar citas, dar seguimiento a tus clientes y mucho más. ¡Haz clic en el enlace y obtén Kapix Lite ahora!
               </p>
               <button className="bg-[#01c38d] text-white shadow-xl px-8 py-3 rounded-full transition-all duration-300 text-lg font-semibold hover:bg-[#00a77a] hover:shadow-lg transform hover:-translate-y-2 flex space-x-2 items-center start-btn1 group">
                 Obtenerlo gratis
@@ -127,20 +124,20 @@ export default function Home() {
             </h2>
             <p className="text-xl text-[#696E79] text-center mb-16 max-w-2xl mx-auto animate-on-scroll opacity-0 transition-all duration-500" 
               style={{transitionDelay: '100ms'}}>
-              Descubre las potentes cualidades que transformarán la operación de tu negocio
+              Estas son algunas de las opciones que obtendrás al adquirir Kapix Lite.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: <i className="fi fi-rr-sparkles"></i>,
-                  title: "Sistema gratuito",
-                  description: "Accede a las herramientas esenciales de forma completamente gratuita.",
+                  title: "Experiencia Kapix",
+                  description: "Disfruta del soporte que ha consolidado a Kapix como líder en ERP para empresas y pymes en Latinoamérica.",
                 },
                 {
                   icon: <i className="fi fi-rr-building"></i>, 
                   title: "Adaptabilidad",
-                  description: "Se ajusta a las necesidades de cualquier tipo de negocio, desde pymes hasta grandes empresas.",
+                  description: "Se ajusta a las necesidades de cualquier tipo de negocio, desde pymes hasta empresas.",
                 },
                 {
                   icon: <i className="fi fi-rr-laptop-mobile"></i>, 
@@ -155,7 +152,7 @@ export default function Home() {
                 {
                   icon: <i className="fi fi-rr-cursor"></i>, 
                   title: "Interfaz Intuitiva",
-                  description: "Navega fácilmente sin complicaciones, sin importar tu nivel de experiencia tecnológica.",
+                  description: "Versión Lite que ha sido diseñada para ser intuitiva y eficientes.",
                 },
                 {
                   icon: <i className="fi fi-rr-lock"></i>, 
@@ -177,52 +174,114 @@ export default function Home() {
             </div>
           </section>
 
-        {/* Video Gallery Section */}
+        {/* Para quiénes está diseñado Kapix Lite section */}
+        <section className="mb-32 relative">
+          <div className="absolute -z-10 opacity-5 top-20 left-0 right-0">
+            <div className="w-full h-64 bg-[#01c38d] rounded-full blur-3xl"></div>
+          </div>
+          
+          <h2 className="text-4xl font-bold mb-2 text-center animate-on-scroll opacity-0 transition-all duration-500">
+            ¿Para quiénes está diseñado <span className="bg-gradient-to-r from-[#191e29] to-[#01c38d] bg-clip-text text-transparent">Kapix Lite?</span><span className="text-[#01c38d] text-5xl"></span>
+          </h2>
+          <p className="text-xl text-[#696E79] text-center mb-16 max-w-2xl mx-auto animate-on-scroll opacity-0 transition-all duration-500" 
+            style={{transitionDelay: '100ms'}}>
+            Hemos diseñado Kapix Lite pensando en diferentes perfiles de negocio.
+          </p>
+          
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-16">
+            <div className="w-full lg:w-1/2 animate-on-scroll opacity-0 transition-all duration-700" 
+                style={{transitionDelay: '150ms'}}>
+              <Image
+                src="/Animation.gif"
+                alt="Personas para quienes está diseñado Kapix Lite"
+                width={600}
+                height={400}
+                className="rounded-2xl w-full h-auto shadow-2xl"
+              />
+            </div>
+            
+            <div className="w-full lg:w-1/2 animate-on-scroll opacity-0 transition-all duration-700" 
+                style={{transitionDelay: '300ms'}}>
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "Emprendedores Unipersonales",
+                    description: "Personas que gestionan su negocio de forma unipersonal y buscan mejorar su productividad.",
+                    icon: <i className="fi fi-rr-user"></i>
+                  },
+                  {
+                    title: "Finanzas Personales y Familiares",
+                    description: "Personas que buscan organizar y optimizar sus finanzas personales y familiares para el éxito.",
+                    icon: <i className="fi fi-rr-dollar"></i>
+                  },
+                  {
+                    title: "Desarrollo de Ideas de Negocio",
+                    description: "Personas que quieren convertir su idea de negocio en un proyecto exitoso.",
+                    icon: <i className="fi fi-rr-shop"></i>
+                  },
+                  {
+                    title: "Emprendedores Principiantes",
+                    description: "Personas con un emprendimiento menor a un año que quieren impulsar su crecimiento.",
+                    icon: <i className="fi fi-rr-rocket-lunch"></i>
+                  }
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start gap-4 group hover:bg-white hover:shadow-lg p-4 rounded-xl transition-all duration-300">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#01c38d] to-[#00a77a] rounded-xl flex items-center justify-center text-white shadow-lg transform transition-transform duration-300">
+                      <span className="text-2xl">{item.icon}</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-[#191e29] group-hover:text-[#01c38d] transition-colors duration-300">{item.title}</h3>
+                      <p className="text-[#696E79]">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Galería de Imágenes de la Plataforma */}
         <section className="mb-20">
           <div className="text-center mb-16 animate-on-scroll opacity-0 transition-all duration-500">
             <h2 className="text-4xl font-bold mb-4">
-              Aprende más con <span className="bg-gradient-to-r from-[#191e29] to-[#01c38d] bg-clip-text text-transparent">nuestros videos</span><span className="text-[#01c38d] text-5xl">.</span>
+            Descubre cómo potenciar el crecimiento de tu negocio con <span className="bg-gradient-to-r from-[#191e29] to-[#01c38d] bg-clip-text text-transparent">Kapix Lite</span><span className="text-[#01c38d] text-5xl">.</span>
             </h2>
             <p className="text-xl text-[#696E79] max-w-2xl mx-auto">
-              Descubre cómo Kapix Lite puede transformar tu negocio con nuestra selección de videos informativos
+              Explora las diferentes funcionalidades que ofrece nuestra plataforma para impulsar el crecimiento de tu negocio.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {videoGallery.map((video, index) => (
-              <Link 
-                href={video.youtubeUrl} 
-                target="_blank" 
-                key={video.id}
-                className="group animate-on-scroll opacity-0 transition-all duration-500 transform translate-y-12"
+            {imageGallery.map((image, index) => (
+              <div 
+                key={image.id}
+                className="animate-on-scroll opacity-0 transition-all duration-500 transform translate-y-12"
                 style={{transitionDelay: `${index * 150}ms`}}
               >
-                <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group">
                   <div className="relative">
                     <Image
-                      src={video.thumbnail}
-                      alt={video.title}
+                      src={image.src}
+                      alt={image.title}
                       width={400}
-                      height={225}
-                      className="w-full h-48 object-cover transform transition-transform duration-500"
+                      height={300}
+                      className="w-full h-56 object-cover transform transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-[#01c38d] rounded-full flex items-center justify-center transform transition-transform duration-500 group-hover:scale-110">
-                      <i className="fi fi-rr-play-circle text-[#ffffff] play-video"></i>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                      <div className="p-4 w-full">
+                        <h3 className="text-white font-semibold">{image.title}</h3>
                       </div>
-                    </div>
-                    <div className="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-sm px-2 py-1 rounded">
-                      {video.duration}
                     </div>
                   </div>
                   <div className="p-5">
-                    <h3 className="text-lg font-semibold mb-2 group-hover:text-[#01c38d] transition-colors duration-300">{video.title}</h3>
-                    <p className="text-sm text-[#696E79]">Haz clic para ver el video en YouTube</p>
+                    <h3 className="text-lg font-semibold mb-2 group-hover:text-[#01c38d] transition-colors duration-300">{image.title}</h3>
+                    <p className="text-sm text-[#696E79]">{image.description}</p>
                   </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
+
         </section>
       </main>
 
