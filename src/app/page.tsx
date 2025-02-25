@@ -201,6 +201,7 @@ export default function Home() {
                 width={600}
                 height={400}
                 className="rounded-2xl w-full h-auto shadow-2xl"
+                property="unoptimized"
               />
             </div>
             
