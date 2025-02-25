@@ -58,19 +58,19 @@ export default function Home() {
   const imageGallery = [
     {
       id: "tareas",
-      src: "/Tareas.png",
+      src: "/Módulo de Tareas.png",
       title: "Módulo de Tareas",
       description: "Puedes crear tareas para optimizar el seguimiento y control de tus actividades de manera más eficiente.",
     },
     {
       id: "proyectos",
-      src: "/Proyectos.png",
+      src: "/Módulo de Proyectos.png",
       title: "Módulo de Proyectos",
       description: "Accede y gestiona proyectos para mejorar la planificación, seguimiento y control de tus iniciativas de manera más efectiva.",
     },
     {
       id: "contratos",
-      src: "/Contratos.png",
+      src: "/Módulo de Contratos.png",
       title: "Módulo de Contratos",
       description: "Gestiona y supervisa tus contratos de manera integral, garantizando su correcta administración y cumplimiento en cada etapa.",
     },
