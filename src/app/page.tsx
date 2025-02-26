@@ -57,16 +57,16 @@ export default function Home() {
 
   const imageGallery = [
     {
-      id: "tareas",
-      src: "/Módulo de Tareas.png",
-      title: "Módulo de Tareas",
-      description: "Puedes crear tareas para optimizar el seguimiento y control de tus actividades, ayudando a organizar mejor tu tiempo y cumplir tus objetivos.",
-    },
-    {
       id: "proyectos",
       src: "/Módulo de Proyectos.png",
       title: "Módulo de Proyectos",
       description: "Accede y gestiona proyectos para mejorar la planificación, seguimiento y control de tus iniciativas de manera más efectiva.",
+    },
+    {
+      id: "tareas",
+      src: "/Módulo de Tareas.png",
+      title: "Módulo de Tareas",
+      description: "Puedes crear tareas para optimizar el seguimiento y control de tus actividades, ayudando a organizar mejor tu tiempo y cumplir tus objetivos.",
     },
     {
       id: "contratos",
