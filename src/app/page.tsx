@@ -60,7 +60,7 @@ export default function Home() {
       id: "tareas",
       src: "/Módulo de Tareas.png",
       title: "Módulo de Tareas",
-      description: "Puedes crear tareas para optimizar el seguimiento y control de tus actividades de manera más eficiente.",
+      description: "Puedes crear tareas para optimizar el seguimiento y control de tus actividades, ayudando a organizar mejor tu tiempo y cumplir tus objetivos.",
     },
     {
       id: "proyectos",
@@ -196,7 +196,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2 animate-on-scroll opacity-0 transition-all duration-700" 
                 style={{transitionDelay: '150ms'}}>
               <Image
-                src="/Animation.gif"
+                src="/Logo Reveal.gif"
                 alt="Personas para quienes está diseñado Kapix Lite"
                 width={600}
                 height={400}
